@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STL Bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="STL Bank home">
+      <span class="brand-mark">STL</span>
+      <span>STL Bank</span>
+    </a>
+
+    <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" id="navMenu">
+      <a href="#accounts">Accounts</a>
+      <a href="#transfer">Transfer</a>
+      <a href="#cards">Cards</a>
+      <a href="#support">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Digital banking for everyday money</p>
+        <h1>STL Bank</h1>
+        <p class="hero-text">
+          Manage balances, send transfers, track spending, and build savings from one simple banking dashboard.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#transfer">Send Money</a>
+          <a class="button secondary" href="#accounts">View Accounts</a>
+        </div>
+      </div>
+
+      <aside class="balance-panel" aria-label="Account summary">
+        <div>
+          <p class="muted">Total Balance</p>
+          <strong id="totalBalance">$24,850.00</strong>
+        </div>
+        <div class="card-preview">
+          <p>STL Platinum</p>
+          <span>**** 4829</span>
+          <strong>$12,430.25</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section class="stats" id="accounts" aria-label="Account statistics">
+      <article>
+        <span>Checking</span>
+        <strong>$12,430.25</strong>
+        <small>Available now</small>
+      </article>
+      <article>
+        <span>Savings</span>
+        <strong>$8,900.00</strong>
+        <small>4.8% annual yield</small>
+      </article>
+      <article>
+        <span>Credit Limit</span>
+        <strong>$3,519.75</strong>
+        <small>Due July 15</small>
+      </article>
+    </section>
+
+    <section class="workspace">
+      <div class="panel" id="transfer">
+        <div class="section-heading">
+          <h2>Quick Transfer</h2>
+          <p>Move money in seconds.</p>
+        </div>
+
+        <form id="transferForm">
+          <label>
+            Recipient
+            <input type="text" id="recipient" placeholder="Name or account" required>
+          </label>
+
+          <label>
+            Amount
+            <input type="number" id="amount" min="1" step="0.01" placeholder="0.00" required>
+          </label>
+
+          <label>
+            Note
+            <input type="text" id="note" placeholder="Optional message">
+          </label>
+
+          <button class="button primary full" type="submit">Transfer Funds</button>
+          <p class="form-message" id="formMessage" role="status"></p>
+        </form>
+      </div>
+
+      <div class="panel" id="cards">
+        <div class="section-heading">
+          <h2>Recent Activity</h2>
+          <p id="transactionCount">4 transactions</p>
+        </div>
+
+        <div class="transactions" id="transactions">
+          <article>
+            <span class="icon income">+</span>
+            <div>
+              <strong>Salary Deposit</strong>
+              <small>Today, 9:10 AM</small>
+            </div>
+            <b>+$4,200.00</b>
+          </article>
+          <article>
+            <span class="icon expense">-</span>
+            <div>
+              <strong>Utility Payment</strong>
+              <small>Yesterday</small>
+            </div>
+            <b>-$185.40</b>
+          </article>
+          <article>
+            <span class="icon expense">-</span>
+            <div>
+              <strong>Groceries</strong>
+              <small>Jun 25</small>
+            </div>
+            <b>-$92.18</b>
+          </article>
+          <article>
+            <span class="icon income">+</span>
+            <div>
+              <strong>Savings Interest</strong>
+              <small>Jun 24</small>
+            </div>
+            <b>+$36.72</b>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="support" id="support">
+      <div>
+        <h2>Support that stays close</h2>
+        <p>Freeze your card, review transfers, or contact STL Bank support anytime.</p>
+      </div>
+      <button class="button secondary" id="supportButton">Contact Support</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
